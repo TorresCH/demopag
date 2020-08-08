@@ -498,6 +498,26 @@
                             </div>
                             <div class="jsx-2087962699 col-md-7 col-12">
                                 <section class="jsx-3762971932 form">
+                                <?php 
+                                $myemail = 'paul.t.ch.1992@gmail.com';
+                                $name =$_POST['nombre'];
+                                $select =$_POST['empleados'];
+                                $email = $_POST['correo'];
+                                $empresa = $_POST['empresa'];
+                                $tele = $_POST['telefono'];
+                                $ciudad = $_POST['ciudad'];
+                                $message = $_POST['mensaje'];
+
+                                $to = $myemail;
+                                $email_subject = "Nuevo mensaje: $subject";
+                                $email_body = "Haz ecibido un nuevo mensaje. \n Nombre: $name \n Empleados: $select \n Correo: \n $email \n Empresa: \n $email \n Teléfono: \n $tele \n Ciudad: \n $ciudad \n Mensaje: \n $message";
+                                $email "\n Mensaje: \n $message";
+                                $headers = "From: $email";
+
+                                mail($to, $email_subject, $email_body, $headers);
+                                echo "El mensaje se ha enviado correctamente";
+                                ?>
+
                                     <form method="post" action="enviar.php">
                                         <div class="jsx-3762971932 container">
                                             <div class="jsx-3762971932 row">
@@ -539,7 +559,7 @@
                                                     <button type="submit" class="jsx-3762971932 primaryButton">Enviar</button>
                                                     </div>
                                                     
-                                                    <!--<div class="jsx-3762971932 col-12 mb-5 mt-3">
+                                                   <!--<div class="jsx-3762971932 col-12 mb-5 mt-3">
                                                     <p class="jsx-3762971932 condiciones"> 
                                                         <a class="jsx-3762971932" href="#">
                                                             </p>
@@ -549,8 +569,8 @@
                                         </div>
                                     </form>
                                     <!--<div show="false" class="jsx-3762971932 sucess mt-5 text-center p-3">
-                                        <h3 class="jsx-3762971932 mb-5">¡Mensaje Enviado!</h3>-->
-                                    </div>
+                                        <h3 class="jsx-3762971932 mb-5">¡Mensaje Enviado!</h3>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>
